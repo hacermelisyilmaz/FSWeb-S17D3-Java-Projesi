@@ -3,10 +3,7 @@ package com.workintech.zoo.controller;
 import com.workintech.zoo.entity.Kangaroo;
 import com.workintech.zoo.enums.Sex;
 import jakarta.annotation.PostConstruct;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,4 +29,11 @@ public class KangarooController {
     public Kangaroo getKangaroo(@PathVariable long id) {
         return kangaroos.get(id);
     }
+
+    @PostConstruct
+    public void addKangaroo(@RequestBody Kangaroo kangaroo) {
+        kangaroos.put(kangaroo.getId(), kangaroo);
+    }
+
+
 }
