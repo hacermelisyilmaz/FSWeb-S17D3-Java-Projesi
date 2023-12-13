@@ -4,6 +4,7 @@ import com.workintech.zoo.entity.Kangaroo;
 import com.workintech.zoo.enums.Sex;
 import jakarta.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,5 +26,10 @@ public class KangarooController {
     @GetMapping
     public Map<Long, Kangaroo> getKangaroos() {
         return kangaroos;
+    }
+
+    @GetMapping("/{id}")
+    public Kangaroo getKangaroo(@PathVariable long id) {
+        return kangaroos.get(id);
     }
 }
