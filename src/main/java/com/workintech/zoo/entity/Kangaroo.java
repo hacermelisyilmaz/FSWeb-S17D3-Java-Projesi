@@ -5,7 +5,7 @@ import lombok.*;
 
 @AllArgsConstructor
 @Data
-public class Kangaroo {
+public class Kangaroo extends Animal {
     private long id;
     private String name;
     private double height;

@@ -6,7 +6,7 @@ import lombok.*;
 
 @AllArgsConstructor
 @Data
-public class Koala {
+public class Koala extends Animal {
     private long id;
     private String name;
     private double weight;
