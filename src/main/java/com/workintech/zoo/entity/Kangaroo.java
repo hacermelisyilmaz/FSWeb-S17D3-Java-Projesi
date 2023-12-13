@@ -3,7 +3,6 @@ package com.workintech.zoo.entity;
 import com.workintech.zoo.enums.Sex;
 import lombok.*;
 
-@NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class Kangaroo {
