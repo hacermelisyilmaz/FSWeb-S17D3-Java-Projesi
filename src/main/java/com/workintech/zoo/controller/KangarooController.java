@@ -35,5 +35,8 @@ public class KangarooController {
         kangaroos.put(kangaroo.getId(), kangaroo);
     }
 
-
+    @PutMapping("/{id}")
+    public void updateKangaroo(@PathVariable long id, @RequestBody Kangaroo kangaroo) {
+        kangaroos.put(id, kangaroo);
+    }
 }
