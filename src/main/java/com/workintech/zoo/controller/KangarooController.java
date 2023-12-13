@@ -39,4 +39,9 @@ public class KangarooController {
     public void updateKangaroo(@PathVariable long id, @RequestBody Kangaroo kangaroo) {
         kangaroos.put(id, kangaroo);
     }
+
+    @DeleteMapping("/{id}")
+    public void removeKangaroo(@PathVariable long id) {
+        kangaroos.remove(id);
+    }
 }
